@@ -3,10 +3,11 @@
 -> Objective
 The goal of this project is to load the MNIST dataset, which consists of handwritten digit images (0–9), and visualize one example of each digit by:
 
-1)Loading the dataset into matrices Xraw (features) and Yraw (labels).
-2)Selecting one image for each digit (0 through 9).
-3)Reshaping the selected images from a flat format (784 pixels) to their original 28×28 grid structure.
-4)Plotting the reshaped images to visualize the handwritten digits.
+1) Loading the dataset into matrices Xraw (features) and Yraw (labels).
+
+2) Selecting one image for each digit (0 through 9).
+3) Reshaping the selected images from a flat format (784 pixels) to their original 28×28 grid structure.
+4) Plotting the reshaped images to visualize the handwritten digits.
 
 
 -> Dataset Details
