@@ -1,6 +1,6 @@
 MNIST Dataset Visualization Project
 
-Objective
+Objective:
 
 
 The goal of this project is to load the MNIST dataset, which consists of handwritten digit images (0–9), and visualize one example of each digit by:
@@ -11,7 +11,7 @@ The goal of this project is to load the MNIST dataset, which consists of handwri
 4) Plotting the reshaped images to visualize the handwritten digits.
 
 
-Dataset Details
+Dataset Details:
 
 Source: MNIST dataset (can be loaded via sklearn or similar libraries).
 
