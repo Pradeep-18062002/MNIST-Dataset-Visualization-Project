@@ -1,34 +1,23 @@
-import matplotlib.pyplot as plt
-from sklearn.datasets import fetch_openml
-import numpy as np
+MNIST Dataset Visualization Project
 
-# Here we are loading the MNIST Dataset
-mnist = fetch_openml('mnist_784', version=1)
-Xraw, Yraw = mnist['data'], mnist['target']
-
-# Here we are conerting to integers as they are in string format
-Yraw = Yraw.astype(np.int8)
+Objective
 
 
+The goal of this project is to load the MNIST dataset, which consists of handwritten digit images (0–9), and visualize one example of each digit by:
 
-fig, axs = plt.subplots(2, 5, figsize=(10, 5))
-axs = axs.ravel()  # Flatten the axes array for easier indexing
+1) Loading the dataset into matrices Xraw (features) and Yraw (labels).
+2) Selecting one image for each digit (0 through 9).
+3) Reshaping the selected images from a flat format (784 pixels) to their original 28×28 grid structure.
+4) Plotting the reshaped images to visualize the handwritten digits.
 
-# Here Iterate through digits 0 to 9 and plot one random example for each
-for digit in range(10):
-    # Find all indices where the current digit is present
-    digit_where = np.where(Yraw == digit)[0]
 
-    # Randomly select one index
-    random_index = np.random.choice(digit_where)
+Dataset Details
 
-    # Access data using .iloc[] to ensure consistent indexing between Xraw and Yraw
-    image = Xraw.iloc[random_index].values.reshape(28, 28)
+Source: MNIST dataset (can be loaded via sklearn or similar libraries).
 
-    # Plot the image
-    axs[digit].imshow(image, cmap='gray')
-    axs[digit].set_title(f"Digit: {digit}")
-    axs[digit].axis('off')
+Features (Xraw):
+Contains 70,000 rows, each with 784 pixel values (28×28 flattened grid).
+Pixel values range from 0 (black) to 255 (white).
 
-plt.tight_layout()
-plt.show()
+Labels (Yraw):
+Contains 70,000 rows, each corresponding to the digit label (0–9).
